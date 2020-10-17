@@ -1,0 +1,69 @@
+<div
+  *ngIf="display"
+  class="alert alert-{{ mode }}"
+  [ngClass]="{
+    warning: mode === 'warning',
+    info: mode === 'info',
+    success: mode === 'success',
+    danger: mode === 'danger',
+    'alert-app-level': this.appLevel
+  }"
+>
+  <div class="alert-items">
+    <div class="alert-item static" role="alert">
+      <div class="alert-icon-wrapper">
+        <clr-icon
+          class="alert-icon"
+          *ngIf="mode === 'warning'"
+          shape="exclamation-triangle"
+        ></clr-icon>
+        <clr-icon
+          class="alert-icon"
+          *ngIf="mode === 'danger'"
+          shape="exclamation-circle"
+        ></clr-icon>
+        <clr-icon
+          class="alert-icon"
+          *ngIf="mode === 'info'"
+          shape="info-circle"
+        ></clr-icon>
+        <clr-icon
+          class="alert-icon"
+          *ngIf="mode === 'success'"
+          shape="check-circle"
+        ></clr-icon>
+      </div>
+      <span class="alert-text">
+        <i class="alert-text">
+          <b *ngIf="this.bold === true && this.italic === true">
+            {{ this.text }}
+          </b>
+        </i>
+        <b
+          class="alert-text"
+          *ngIf="this.bold === true && this.italic === false"
+          >{{ this.text }}
+        </b>
+        <i
+          class="alert-text"
+          *ngIf="this.bold === false && this.italic === true"
+          >{{ this.text }}
+        </i>
+        <span
+          class="alert-text"
+          *ngIf="this.bold === false && this.italic === false"
+          >{{ this.text }}
+        </span>
+      </span>
+    </div>
+  </div>
+  <button
+    type="button"
+    (click)="closeAlert()"
+    class="close"
+    aria-label="Close"
+    *ngIf="closable"
+  >
+    <clr-icon aria-hidden="true" shape="close"></clr-icon>
+  </button>
+</div>

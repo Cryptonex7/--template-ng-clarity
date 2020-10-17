@@ -1,0 +1,181 @@
+@import "~@clr/ui/src/utils/variables/variables.color";
+@import "~@clr/ui/src/utils/variables/variables.global";
+
+// Overrides
+@media only screen and (max-device-width: 1000px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+.datagrid,
+.datagrid-detail-pane {
+  margin-top: 0;
+}
+
+.clr-accordion-panel-open,
+.clr-accordion-content {
+  background-color: var(--clr-thead-bg-color);
+}
+
+.datagrid-table .datagrid-column.datagrid-select,
+.datagrid-footer .column-switch-wrapper {
+  visibility: hidden;
+}
+
+// Custom Styles
+
+.disabled {
+  color: rgb(204, 204, 204);
+  background-color: #ececec;
+  cursor: not-allowed;
+  margin: 0 0.1rem;
+  font-variant-caps: all-small-caps;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.flex-just-start {
+  justify-content: flex-start !important;
+}
+
+.flex-just-end {
+  justify-content: flex-end;
+}
+
+.flex-just-sb {
+  justify-content: space-between;
+}
+
+.flex-just-center {
+  justify-content: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-6 {
+  flex: 6;
+}
+.flex-7 {
+  flex: 7;
+}
+.flex-8 {
+  flex: 8;
+}
+.flex-9 {
+  flex: 9;
+}
+.flex-10 {
+  flex: 10;
+}
+
+.clear-margin {
+  margin: 0;
+}
+
+.tooltip .tooltip-content.tooltip-md {
+  width: auto;
+  max-width: 10rem;
+}
+
+.custom-alert.warning {
+  background-color: var(--clr-alert-warning-bg-color);
+  color: var(--clr-theme-alert-font-color);
+}
+
+.custom-alert.danger {
+  background-color: var(--clr-alert-danger-bg-color);
+  color: var(--clr-alert-danger-font-color);
+}
+
+.custom-alert.info {
+  background-color: var(--clr-alert-info-bg-color);
+  color: var(--clr-alert-info-font-color);
+  font-weight: 600;
+}
+
+.custom-alert.success {
+  background-color: var(--clr-alert-success-bg-color);
+  color: var(--clr-alert-success-font-color);
+  font-weight: 600;
+}
+
+.warning {
+  color: #c47500;
+  font-weight: bolder;
+}
+
+.danger {
+  color: rgb(255, 79, 47);
+  font-weight: bolder;
+}
+
+.info {
+  color: #007afb;
+}
+
+.success {
+  color: #00aa4d;
+  font-weight: bolder;
+}
+
+// Scrollbar Styles
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 3.5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6d717992;
+  border-radius: 3.5px;
+  border-width: thin;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9298a5;
+}

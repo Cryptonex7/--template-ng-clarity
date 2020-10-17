@@ -1,0 +1,474 @@
+@import "./styles.scss";
+
+// styles.scss overrides
+
+.warning {
+  color: rgb(196, 117, 0);
+  font-weight: bolder;
+}
+
+.danger {
+  color: rgb(255, 79, 47);
+  font-weight: bolder;
+}
+
+.info {
+  color: var(--clr-alert-info-bg-color);
+}
+
+.success {
+  color: var(--clr-alert-success-bg-color);
+}
+
+:root {
+  --clr-global-app-background: #121b20;
+  --clr-global-selection-color: #324f62;
+  --clr-global-hover-bg-color: #28404d;
+  --clr-close-color--normal: #c3cfd5;
+  --clr-close-color--normal-opacity: 1;
+  --clr-close-color--hover: #fff;
+  --clr-close-color--hover-opacity: 1;
+  --clr-popover-box-shadow-color: rgba(0, 0, 0, 0.5);
+  --clr-link-active-color: #4aaed9;
+  --clr-link-color: #4aaed9;
+  --clr-link-hover-color: #4aaed9;
+  --clr-link-visited-color: #9caae2;
+  --clr-theme-alert-font-color: #eaedf0;
+  --clr-theme-app-alert-font-color: #000;
+  --clr-alert-info-bg-color: #0f5e80;
+  --clr-alert-info-font-color: var(--clr-theme-alert-font-color);
+  --clr-alert-info-border-color: transparent;
+  --clr-alert-info-icon-color: var(--clr-theme-alert-font-color);
+  --clr-alert-success-bg-color: #205522;
+  --clr-alert-success-font-color: var(--clr-theme-alert-font-color);
+  --clr-alert-success-border-color: transparent;
+  --clr-alert-success-icon-color: var(--clr-theme-alert-font-color);
+  --clr-alert-danger-bg-color: #862d31;
+  --clr-alert-danger-font-color: var(--clr-theme-alert-font-color);
+  --clr-alert-danger-border-color: transparent;
+  --clr-alert-danger-icon-color: var(--clr-theme-alert-font-color);
+  --clr-alert-warning-bg-color: #816709;
+  --clr-alert-warning-font-color: var(--clr-theme-alert-font-color);
+  --clr-alert-warning-border-color: transparent;
+  --clr-alert-warning-icon-color: var(--clr-theme-alert-font-color);
+  --clr-app-alert-info-bg-color: #4aaed9;
+  --clr-app-alert-info-font-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-info-border-color: transparent;
+  --clr-app-alert-info-icon-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-warning-bg-color: #fdd008;
+  --clr-app-alert-warning-icon-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-warning-font-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-warning-border-color: transparent;
+  --clr-app-alert-danger-bg-color: #f55047;
+  --clr-app-alert-danger-icon-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-danger-font-color: var(--clr-theme-app-alert-font-color);
+  --clr-app-alert-danger-border-color: transparent;
+  --clr-alert-action-color: #fff;
+  --clr-alert-action-active-color: #fff;
+  --clr-app-alert-close-icon-color: var(--clr-close-color--normal);
+  --clr-alert-close-icon-opacity: 1;
+  --clr-alert-close-icon-hover-opacity: 1;
+  --clr-app-level-alert-color: #000;
+  --clr-app-alert-close-icon-color: #000;
+  /********** * END: Alerts */
+  /***************** * Badge */
+  --clr-badge-font-color-light: #000;
+  --clr-badge-font-color-dark: #000;
+  --clr-badge-info-bg-color: #4aaed9;
+  --clr-badge-info-color: #000;
+  --clr-badge-success-bg-color: #61a220;
+  --clr-badge-success-color: #000;
+  --clr-badge-warning-bg-color: #fdd008;
+  --clr-badge-warning-color: #000;
+  --clr-badge-danger-bg-color: #f55047;
+  --clr-badge-danger-color: #000;
+  --clr-badge-gray-bg-color: #6c7784;
+  --clr-badge-purple-bg-color: #ae73c9;
+  --clr-badge-blue-bg-color: #0077b8;
+  --clr-badge-orange-bg-color: #ff9c33;
+  --clr-badge-light-blue-bg-color: #8bccdf;
+  /***************** * Buttons */
+  --clr-btn-disabled-font-color: #000;
+  --clr-btn-outline-disabled-font-color: #fff;
+  --clr-btn-disabled-bg-color: #fff;
+  --clr-btn-disabled-border-color: #fff;
+  --clr-btn-icon-disabled-color: var(--clr-btn-outline-disabled-font-color);
+  --clr-btn-default-color: #4aaed9;
+  --clr-btn-default-bg-color: transparent;
+  --clr-btn-default-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --clr-btn-default-hover-color: #57c8ea;
+  --clr-btn-default-box-shadow-color: #000;
+  --clr-btn-default-checked-color: #fff;
+  --clr-btn-default-checked-bg-color: var(--clr-btn-default-color);
+  --clr-btn-default-disabled-color: var(--clr-btn-outline-disabled-font-color);
+  --clr-btn-default-disabled-border-color: var(--clr-btn-disabled-border-color);
+  --clr-btn-default-outline-color: #4aaed9;
+  --clr-btn-default-outline-bg-color: transparent;
+  --clr-btn-default-outline-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --clr-btn-default-outline-hover-color: #57c8ea;
+  --clr-btn-default-outline-box-shadow-color: #000;
+  --clr-btn-default-outline-checked-color: #fff;
+  --clr-btn-default-outline-checked-bg-color: var(
+    --clr-btn-default-outline-color
+  );
+  --clr-btn-default-outline-disabled-color: var(
+    --clr-btn-outline-disabled-font-color
+  );
+  --clr-btn-default-outline-disabled-border-color: var(
+    --clr-btn-disabled-border-color
+  );
+  --clr-btn-default-outline-disabled-checked-color: var(
+    --clr-btn-disabled-bg-color
+  );
+  --clr-btn-primary-color: #000;
+  --clr-btn-primary-bg-color: #4aaed9;
+  --clr-btn-primary-border-color: #4aaed9;
+  --clr-btn-primary-hover-bg-color: #57c8ea;
+  --clr-btn-primary-hover-color: #000;
+  --clr-btn-primary-box-shadow-color: #0065ad;
+  --clr-btn-primary-checked-color: #fff;
+  --clr-btn-primary-disabled-color: var(--clr-btn-disabled-font-color);
+  --clr-btn-primary-disabled-bg-color: var(--clr-btn-disabled-bg-color);
+  --clr-btn-primary-disabled-border-color: var(--clr-btn-disabled-border-color);
+  --clr-btn-success-color: #000;
+  --clr-btn-success-bg-color: #61b715;
+  --clr-btn-success-hover-bg-color: #84c71a;
+  --clr-btn-success-hover-color: var(--clr-btn-success-color);
+  --clr-btn-success-box-shadow-color: #276b00;
+  --clr-btn-success-checked-bg-color: var(--clr-btn-success-hover-bg-color);
+  --clr-btn-success-disabled-color: var(--clr-btn-disabled-font-color);
+  --clr-btn-success-disabled-bg-color: var(--clr-btn-disabled-bg-color);
+  --clr-btn-success-disabled-border-color: var(--clr-btn-disabled-border-color);
+  --clr-btn-success-outline-color: #61b715;
+  --clr-btn-success-outline-border-color: #61b715;
+  --clr-btn-success-outline-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --clr-btn-success-outline-hover-color: #84c71a;
+  --clr-btn-success-outline-box-shadow-color: #000;
+  --clr-btn-success-outline-checked-color: #fff;
+  --clr-btn-success-outline-disabled-color: var(
+    --clr-btn-outline-disabled-font-color
+  );
+  --clr-btn-success-outline-disabled-bg-color: transparent;
+  --clr-btn-success-outline-disabled-border-color: var(
+    --clr-btn-disabled-border-color
+  );
+  --clr-btn-danger-color: #000;
+  --clr-btn-danger-bg-color: #f55047;
+  --clr-btn-danger-hover-bg-color: #ff6961;
+  --clr-btn-danger-hover-color: var(--clr-btn-danger-color);
+  --clr-btn-danger-box-shadow-color: #c72100;
+  --clr-btn-danger-checked-bg-color: #c72100;
+  --clr-btn-danger-disabled-color: var(--clr-btn-disabled-font-color);
+  --clr-btn-danger-disabled-bg-color: var(--clr-btn-disabled-bg-color);
+  --clr-btn-danger-disabled-border-color: var(--clr-btn-disabled-border-color);
+  --clr-btn-danger-outline-border-color: #f55047;
+  --clr-btn-danger-outline-color: #f55047;
+  --clr-btn-danger-outline-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --clr-btn-danger-outline-hover-color: #ff6961;
+  --clr-btn-danger-outline-box-shadow-color: #000;
+  --clr-btn-danger-outline-checked-bg-color: #f55047;
+  --clr-btn-danger-outline-checked-color: #fff;
+  --clr-btn-danger-outline-disabled-color: var(
+    --clr-btn-outline-disabled-font-color
+  );
+  --clr-btn-danger-outline-disabled-bg-color: transparent;
+  --clr-btn-danger-outline-disabled-border-color: var(
+    --clr-btn-disabled-border-color
+  );
+  --clr-btn-link-color: #4aaed9;
+  --clr-btn-link-hover-color: #57c8ea;
+  --clr-btn-link-checked-color: #4aaed9;
+  --clr-btn-link-disabled-color: var(--clr-btn-outline-disabled-font-color);
+  --clr-btn-inverse-border-color: #eaedf0;
+  --clr-btn-inverse-bg-color: transparent;
+  --clr-btn-inverse-color: #eaedf0;
+  --clr-btn-inverse-hover-bg-color: rgba(0, 0, 0, 0.1);
+  --clr-btn-inverse-hover-color: #fff;
+  --clr-btn-inverse-box-shadow-color: #a8b5bd;
+  --clr-btn-inverse-checked-bg-color: rgba(255, 255, 255, 0.15);
+  --clr-btn-inverse-checked-color: #fff;
+  --clr-btn-inverse-disabled-color: var(--clr-btn-outline-disabled-font-color);
+  --clr-btn-inverse-disabled-border-color: var(--clr-btn-disabled-border-color);
+  /********** * Card */
+  --clr-card-bg-color: #21333b;
+  --clr-card-border-color: #0e161b;
+  --clr-card-title-color: #eaedf0;
+  --clr-card-box-shadow: 0 0.15rem 0 0 var(--clr-card-border-color);
+  --clr-card-divider-color: var(--clr-card-border-color);
+  /********** * Datagrid */
+  --clr-datagrid-icon-color: #acbac3;
+  --clr-datagrid-row-hover: #28404d;
+  --clr-datagrid-row-selected: #fff;
+  --clr-datagrid-popover-bg-color: #162227;
+  --clr-datagrid-action-toggle: #acbac3;
+  --clr-datagrid-pagination-btn-color: #eaedf0;
+  --clr-datagrid-pagination-btn-disabled-color: #eaedf0;
+  --clr-datagrid-pagination-btn-disabled-opacity: 0.46;
+  --clr-datagrid-pagination-input-border-color: #495865;
+  --clr-datagrid-pagination-input-border-focus-color: #4aaed9;
+  --clr-datagrid-popover-border-color: #000;
+  --clr-datagrid-action-popover-hover-color: var(--clr-datagrid-row-hover);
+  --clr-datagrid-loading-background: rgba(0, 0, 0, 0.5);
+  /********* * Dropdown */
+  --clr-dropdown-active-text-color: #fff;
+  --clr-dropdown-bg-color: #21333b;
+  --clr-dropdown-text-color: #acbac3;
+  --clr-dropdown-item-color: #acbac3;
+  --clr-dropdown-border-color: #000;
+  --clr-dropdown-child-border-color: #000;
+  --clr-dropdown-bg-active-color: var(--clr-global-selection-color);
+  --clr-dropdown-bg-hover-color: var(--clr-global-hover-bg-color);
+  --clr-dropdown-selection-color: #324f62;
+  --clr-dropdown-box-shadow: var(--clr-popover-box-shadow-color);
+  --clr-dropdown-divider-color: var(--clr-dropdown-border-color);
+  --clr-dropdown-header-color: #acbac3;
+  --clr-calendar-background-color: #21333b;
+  --clr-calendar-border-color: #000;
+  --clr-datepicker-trigger-color: #4aaed9;
+  --clr-datepicker-trigger-hover-color: #57c8ea;
+  --clr-calendar-btn-color: #4aaed9;
+  --clr-calendar-btn-hover-focus-color: #28404d;
+  --clr-calendar-active-cell-background-color: #324f62;
+  --clr-calendar-active-focus-cell-background-color: #324f62;
+  --clr-calendar-today-date-cell-color: #fff;
+  --clr-calendar-active-cell-color: #fff;
+  /****** * Forms: TODO: track down component usages and names */
+  --clr-forms-label-color: #acbac3;
+  --clr-forms-text-color: #eaedf0;
+  --clr-forms-invalid-color: #f55047;
+  --clr-forms-subtext-color: #737373;
+  --clr-forms-subtext-color: #acbac3;
+  --clr-forms-border-color: #acbac3;
+  --clr-forms-focused-color: #4aaed9;
+  --clr-forms-textarea-background-color: #17242b;
+  --clr-forms-select-multiple-background-color: #21333b;
+  --clr-forms-select-multiple-border-color: #000;
+  --clr-forms-select-option-color: #17242b;
+  --clr-forms-checkbox-label-color: #acbac3;
+  --clr-forms-checkbox-background-color: #4aaed9;
+  --clr-forms-checkbox-checked-shadow: inset 0 0 0 0.3rem
+    var(--clr-forms-checkbox-background-color);
+  --clr-forms-checkbox-indeterminate-border-color: #acbac3;
+  --clr-forms-checkbox-mark-color: #000;
+  --clr-forms-checkbox-disabled-background-color: #8f9ba3;
+  --clr-forms-checkbox-disabled-mark-color: #000;
+  --clr-forms-radio-label-color: #acbac3;
+  --clr-forms-radio-selected-shadow: var(--clr-forms-checkbox-checked-shadow);
+  --clr-forms-radio-focused-shadow: 0 0 0.1rem 0.1rem
+    var(--clr-link-active-color);
+  --clr-forms-radio-disabled-background-color: #000;
+  --clr-forms-radio-disabled-mark-color: var(
+    --clr-forms-checkbox-disabled-mark-color
+  );
+  --clr-forms-radio-disabled-shadow: var(--clr-forms-checkbox-checked-shadow);
+  /********** * Header */
+  --clr-header-bgColor: #3f4d5f;
+  --clr-header-default-bg-color: var(--clr-header-bgColor);
+  --clr-header-1-bg-color: var(--clr-header-bgColor);
+  --clr-header-2-bg-color: #155165;
+  --clr-header-3-bg-color: #194b70;
+  --clr-header-4-bg-color: #5b3451;
+  --clr-header-5-bg-color: #3e436a;
+  --clr-header-6-bg-color: #0e161b;
+  /********** * Icons */
+  --clr-icon-color-success: #61b715;
+  --clr-icon-color-error: #f55047;
+  --clr-icon-color-warning: #fdd008;
+  --clr-icon-color-info: #4aaed9;
+  --clr-icon-color-inverse: #fff;
+  --clr-icon-color-highlight: #4aaed9;
+  /***************** * Label */
+  --clr-label-font-color-light: #fff;
+  --clr-label-font-color-dark: #000;
+  --clr-label-bg-hover-color: #575757;
+  --clr-label-gray-bg-color: #6c7784;
+  --clr-label-purple-bg-color: #ae73c9;
+  --clr-label-blue-bg-color: #0077b8;
+  --clr-label-orange-bg-color: #ff9c33;
+  --clr-label-light-blue-bg-color: #8bccdf;
+  --clr-label-info-bg-color: #0f5e80;
+  --clr-label-info-font-color: var(--clr-label-font-color-light);
+  --clr-label-info-border-color: var(--clr-label-info-bg-color);
+  --clr-label-success-bg-color: #205522;
+  --clr-label-success-font-color: var(--clr-label-font-color-light);
+  --clr-label-success-border-color: var(--clr-label-success-bg-color);
+  --clr-label-danger-bg-color: #862d31;
+  --clr-label-danger-font-color: var(--clr-label-font-color-light);
+  --clr-label-danger-border-color: var(--clr-label-danger-bg-color);
+  --clr-label-warning-bg-color: #816709;
+  --clr-label-warning-font-color: var(--clr-label-font-color-light);
+  --clr-label-warning-border-color: var(--clr-label-warning-bg-color);
+  /******** * Login */
+  --clr-login-background-color: var(--clr-global-app-background);
+  --clr-login-background: "%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%22736px%22%20height%3D%22838px%22%20viewBox%3D%220%200%20736%20838%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3Evector%20art%3C%2Ftitle%3E%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%3Cdefs%3E%3C%2Fdefs%3E%3Cg%20id%3D%22symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20id%3D%22Login%22%20transform%3D%22translate(-504.000000%2C%200.000000)%22%3E%3Cg%20id%3D%22replaceable-image%22%20transform%3D%22translate(504.000000%2C%200.000000)%22%3E%3Cg%20id%3D%22vector-art%22%20transform%3D%22translate(-78.000000%2C%20-82.000000)%22%3E%3Crect%20id%3D%22Rectangle-path%22%20fill%3D%22%2322343E%22%20x%3D%220%22%20y%3D%220.38%22%20width%3D%221127.55%22%20height%3D%22921.62%22%3E%3C%2Frect%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%232F657B%22%20points%3D%220%203.06%200%20599.24%20298.14%20301.43%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%23438597%22%20points%3D%220%20408.65%200%20599.24%2095.29%20504.06%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%232F657B%22%20points%3D%22918.21%20921.95%20818.63%20822.3%20718.89%20921.95%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%233B758E%22%20points%3D%22818.63%20822.3%20298.14%20301.43%200%20599.24%200%20655.02%20266.51%20921.95%20718.89%20921.95%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%23579EB2%22%20points%3D%22512.67%20921.95%2095.29%20504.06%200%20599.24%200%20654.97%20267.06%20921.95%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%23344B57%22%20points%3D%22266.51%20921.95%200%20655.02%200%20921.95%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%23A7C9D5%22%20points%3D%221128%200%20799.58%200%201128%20329.83%22%3E%3C%2Fpolygon%3E%3Cpolygon%20id%3D%22Shape%22%20fill%3D%22%23344B57%22%20points%3D%221128%20329.83%20799.58%200%20599.9%200%20298.14%20301.43%20818.63%20822.3%201128%20513.18%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+  /********** * Modal */
+  --clr-modal-close-color: #acbac3;
+  --clr-modal-bg-color: #21333b;
+  --clr-modal-backdrop-color: rgba(0, 0, 0, 0.85);
+  /*************** * Nav */
+  --clr-sliding-panel-text-color: #575757;
+  --clr-transition-style: ease;
+  --clr-nav-background-color: #ededed;
+  --clr-nav-background-color: #1b2a32;
+  --clr-responsive-nav-hover-bg: var(--clr-global-selection-color);
+  --clr-sliding-panel-text-color: #fff;
+  --clr-sidenav-border-color: #152228;
+  --clr-sidenav-link-hover-color: var(--clr-global-selection-color);
+  --clr-subnav-bgColor: #17242b;
+  --clr-nav-shadow: 0 -0.05rem 0 #495865 inset;
+  --clr-subnav-bg-color: #212121;
+  /************** * Progress Bars */
+  --clr-progress-defaultBarColor: #4aaed9;
+  --clr-progress-success-color: #61b715;
+  --clr-progress-danger-color: #f55047;
+  --clr-progress-warning-color: var(--clr-progress-danger-color);
+  --clr-progress-bg-color: #31454e;
+  /********* * Signpost */
+  --clr-signpost-action-color: #eaedf0;
+  --clr-signpost-action-hover-color: #4aaed9;
+  --clr-signpost-content-bg-color: #21333b;
+  --clr-signpost-content-border-color: #000;
+  --clr-signpost-border-size: 0.5rem;
+  --clr-signpost-pointer-border: var(
+    --clr-signpost-border-size solid --clr-signpost-content-border-color
+  );
+  --clr-signpost-pointer-invisible-border: var(
+    --clr-signpost-border-size solid transparent
+  );
+  --clr-signpost-pointer-psuedo-border: var(
+    --clr-signpost-border-size solid --clr-signpost-content-bg-color
+  );
+  /********* * Spinner */
+  --clr-spinner-color: #4aaed9;
+  --clr-spinner-bg-color: #31454e;
+  --clr-spinner-opacity: 1;
+  /********* * Stack View */
+  --clr-stack-view-border-color: #566471;
+  --clr-stack-view-bg-color: var(--clr-global-app-background);
+  --clr-stack-view-stack-block-border-bottom: var(
+    --clr-stack-view-border-color
+  );
+  --clr-stack-view-border-box-color: var(--clr-stack-view-border-color);
+  --clr-stack-block-changed-border-top-color: #0065ad;
+  --clr-stack-view-stack-block-label-and-content-bg-color: var(
+    --clr-global-app-background
+  );
+  --clr-stack-view-stack-children-stack-block-border-bottom-color: var(
+    --clr-stack-view-border-color
+  );
+  --clr-stack-view-stack-children-stack-block-label-and-content-bg-color: #21333b;
+  --clr-stack-view-stack-block-label-text-color: #929ba5;
+  --clr-stack-view-stack-block-expanded-bg-color: #324f62;
+  --clr-stack-view-stack-block-expandable-hover: #324f62;
+  --clr-stack-view-stack-block-content-text-color: #acbac3;
+  --clr-stack-view-stack-block-expanded-text-color: #fff;
+  --clr-stack-view-stack-block-caret-color: #999;
+  /********** * Table */
+  --clr-thead-bgcolor: #1b2a32;
+  --clr-table-bgcolor: #21333b;
+  --clr-table-font-color: #acbac3;
+  --clr-thead-color: var(--clr-table-font-color);
+  --clr-datagrid-default-border-color: #495865;
+  --clr-table-header-border-bottom-color: var(
+    --clr-datagrid-default-border-color
+  );
+  --clr-table-footer-border-top-color: var(--clr-datagrid-default-border-color);
+  --clr-tablerow-bordercolor: var(--clr-datagrid-default-border-color);
+  --clr-table-border-color: var(--clr-datagrid-default-border-color);
+  --clr-table-bordercolor: var(--clr-datagrid-default-border-color);
+  --clr-table-borderstyle: 0.05rem solid
+    var(--clr-datagrid-default-border-color);
+  /********** * Tabs */
+  --clr-nav-box-shadow-color: #495865;
+  --clr-nav-active-box-shadow-color: #4aaed9;
+  --clr-nav-link-active-color: #fff;
+  --clr-nav-link-color: #acbac3;
+  /** * Timeline */
+  --clr-timeline-line-color: #acbac3;
+  --clr-timeline-step-header-color: #eaedf0;
+  --clr-timeline-step-title-color: #acbac3;
+  --clr-timeline-step-description-color: #acbac3;
+  --clr-timeline-incomplete-step-color: #eaedf0;
+  --clr-timeline-current-step-color: #4aaed9;
+  --clr-timeline-success-step-color: #61b715;
+  --clr-timeline-error-step-color: #f55047;
+  /********** * Tooltip */
+  --clr-tooltip-color: #000;
+  --clr-tooltip-background-color: #fff;
+  /********** * Tree View */
+  --clr-tree-node-caret-link-hover-color: #fff;
+  --clr-tree-link-hover-color: #ededed;
+  --clr-tree-link-hover-color: var(--clr-global-hover-bg-color);
+  --clr-tree-link-selection-color: var(--clr-global-selection-color);
+  --clr-tree-link-text-color: #acbac3;
+  --clr-tree-node-caret-color: #acbac3;
+  /********** * Typography */
+  --clr-global-font-color: #eaedf0;
+  --clr-global-font-color-secondary: #acbac3;
+  --clr-h1-color: var(--clr-global-font-color);
+  --clr-h2-color: var(--clr-global-font-color);
+  --clr-h3-color: var(--clr-global-font-color);
+  --clr-h4-color: var(--clr-global-font-color);
+  --clr-h5-color: var(--clr-global-font-color);
+  --clr-h6-color: var(--clr-global-font-color-secondary);
+  --clr-p1-color: var(--clr-global-font-color-secondary);
+  --clr-p2-color: var(--clr-global-font-color-secondary);
+  --clr-p3-color: var(--clr-global-font-color-secondary);
+  --clr-p4-color: var(--clr-global-font-color);
+  --clr-p5-color: var(--clr-global-font-color);
+  --clr-p6-color: var(--clr-global-font-color);
+  --clr-p7-color: var(--clr-global-font-color);
+  --clr-p8-color: var(--clr-global-font-color);
+  /********** * Vertical Nav */
+  --clr-vertical-nav-item-color: #acbac3;
+  --clr-vertical-nav-item-active-color: #fff;
+  --clr-vertical-nav-bg-color: #17242b;
+  --clr-vertical-nav-active-bg-color: var(--clr-global-selection-color);
+  --clr-vertical-nav-hover-bg-color: var(--clr-global-hover-bg-color);
+  --clr-vertical-nav-icon-active-color: #fff;
+  --clr-vertical-nav-toggle-icon-color: #acbac3;
+  --clr-vertical-nav-trigger-divider-border-color: #232e34;
+  /********** * Wizard */
+  --clr-wizard-sidenav-bgcolor: #1b2a32;
+  --clr-wizard-sidenav-text--active: #fff;
+  --clr-wizard-stepnav-active-bgcolor: #324f62;
+  --clr-wizard-stepnav-border-color: #3b484e;
+  --clr-wizard-stepnav-border-color--active: #61b715;
+  --clr-wizard-step-nav-border-color: #152228;
+  --clr-wizard-sidenav-text: #acbac3;
+  --clr-wizard-title-text: #eaedf0;
+  --clr-wizard-main-textColor: #acbac3;
+  --clr-wizard-stepnav-error-color: #f55047;
+  --clr-accordion-text-color: var(--clr-color-neutral-0);
+  --clr-accordion-active-background-color: var(--clr-global-selection-color);
+  --clr-accordion-header-hover-background-color: var(
+    --clr-global-selection-color
+  );
+  --clr-accordion-content-background-color: #21333b;
+  --clr-accordion-header-background-color: #1b2a32;
+  --clr-accordion-border-left-color: #2b4250;
+  --clr-accordion-border-color: #495865;
+}
+:root clr-icon.is-green,
+:root clr-icon.is-success {
+  fill: var(--clr-icon-color-success);
+}
+:root clr-icon.is-red,
+:root clr-icon.is-danger,
+:root clr-icon.is-error {
+  fill: var(--clr-icon-color-error);
+}
+:root clr-icon.is-warning {
+  fill: var(--clr-icon-color-warning);
+}
+:root clr-icon.is-blue,
+:root clr-icon.is-info {
+  fill: var(--clr-icon-color-info);
+}
+:root clr-icon.is-white,
+:root clr-icon.is-inverse {
+  fill: var(--clr-icon-color-inverse);
+}
+:root clr-icon.is-highlight {
+  fill: var(--clr-icon-color-highlight);
+}

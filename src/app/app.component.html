@@ -1,0 +1,27 @@
+<div class="main-container">
+  <app-alert-bar
+    [text]="
+      'This is an App level Alert. Check the component in src/app/global/alert-bar.'
+    "
+    [appLevel]="true"
+    [mode]="'warning'"
+  ></app-alert-bar>
+  <app-appbar></app-appbar>
+  <div class="content-container">
+    <app-side-drawer
+      *ngIf="this.tabs.length > 0"
+      class="sidebar-wrapper"
+      [tabs]="this.tabs"
+      [structure]="this.structure"
+    ></app-side-drawer>
+    <clr-vertical-nav
+      *ngIf="this.tabs.length === 0"
+      class="sidebar"
+      [clrVerticalNavCollapsible]="true"
+    >
+    </clr-vertical-nav>
+    <div class="content-area" style="height: 100%">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

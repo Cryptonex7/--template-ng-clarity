@@ -1,0 +1,7 @@
+export enum SyncStatusEnum {
+  SUCCESS = 'SUCCESS',
+  FAILED = 'FAILED',
+  SYNCING = 'SYNCING',
+  DELETED = 'DELETED',
+  DELETE_TEST_ONGOING = 'DELETE_TEST_ONGOING',
+}

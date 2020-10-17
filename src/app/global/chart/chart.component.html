@@ -1,0 +1,64 @@
+<div class="signpost-item" style="text-align: right">
+  <div class="trigger-item">
+    <clr-signpost style="text-align: left">
+      <button
+        class="btn btn-primary btn-sm"
+        style="padding: 0 12px; margin-right: 0"
+        clrSignpostTrigger
+      >
+        <clr-icon shape="bar-chart"> </clr-icon> Chart Actions
+      </button>
+      <clr-signpost-content
+        [clrPosition]="this.actionsPanelPosition"
+        *clrIfOpen
+      >
+        <clr-toggle-container>
+          <label>Chart Actions</label>
+          <clr-toggle-wrapper>
+            <input
+              type="checkbox"
+              clrToggle
+              (click)="this.toggleLegend($event)"
+              [checked]="this.ChartLegend"
+            />
+            <label>Show Legend</label>
+          </clr-toggle-wrapper>
+          <clr-toggle-wrapper>
+            <input
+              type="checkbox"
+              clrToggle
+              (click)="this.toggleXLabels($event)"
+              [checked]="this.ChartOptions.scales.xAxes[0].ticks.display"
+            />
+            <label>Show X Axis Labels</label>
+          </clr-toggle-wrapper>
+          <clr-control-helper>Customize the chart options!</clr-control-helper>
+        </clr-toggle-container>
+      </clr-signpost-content>
+    </clr-signpost>
+  </div>
+</div>
+<div
+  #chartContainer
+  class="myChart"
+  [ngStyle]="{
+    'height.px': height,
+    'maxHeight.px': height,
+    'width.px': width === null ? '100%' : width,
+    width: width === null ? '100%' : width
+  }"
+>
+  <canvas
+    #canvas
+    height="{{ height }}"
+    style="width: 100% !important"
+    baseChart
+    [datasets]="ChartData"
+    [labels]="ChartLabels"
+    [options]="ChartOptions"
+    [colors]="ChartColors"
+    [legend]="ChartLegend"
+    [chartType]="ChartType"
+    [plugins]="ChartPlugins"
+  ></canvas>
+</div>

@@ -1,0 +1,60 @@
+<header class="header header-1">
+  <div class="branding">
+    <img src="/assets/vmware.svg" width="70" style="margin-right: 4px" />
+    <a [routerLink]="['/']" class="nav-link">
+      <span class="title">Clarity Template</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <div
+      class="nav-link"
+      [routerLink]="['Page1']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span class="nav-text">Page 1</span>
+    </div>
+    <div
+      class="nav-link"
+      [routerLink]="['Page2']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span class="nav-text">Page 2</span>
+    </div>
+  </div>
+  <div class="header-actions">
+    <div
+      class="nav-link"
+      (click)="this.toggleDarkTheme()"
+      style="padding-right: 0; cursor: pointer"
+    >
+      <span class="nav-text">
+        Switch to {{ darkThemeIsActive ? "Light" : "Dark" }} Theme
+      </span>
+    </div>
+    <div class="nav-link nav-icon" aria-label="settings">
+      <clr-icon
+        shape="sun"
+        [ngClass]="{ 'is-solid': darkThemeIsActive }"
+        (click)="this.toggleDarkTheme()"
+      ></clr-icon>
+    </div>
+  </div>
+</header>
+<!-- <nav class="subnav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Management</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Cloud</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Tenants</a>
+    </li>
+  </ul>
+</nav> -->

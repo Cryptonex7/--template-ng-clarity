@@ -1,0 +1,26 @@
+<clr-vertical-nav class="sidebar" [clrVerticalNavCollapsible]="true">
+  <clr-vertical-nav-group *ngFor="let tab of tabs" routerLinkActive="active">
+    <clr-icon shape="cpu" clrVerticalNavIcon></clr-icon>
+    {{ tab }}
+    <clr-vertical-nav-group-children>
+      <a
+        *ngFor="let page of this.structure[tab]"
+        clrVerticalNavLink
+        [routerLink]="[page]"
+        [routerLinkActive]="'active'"
+      >
+        <clr-tooltip>
+          <span clrTooltipTrigger>{{ page | shorten: 16 }}</span>
+          <clr-tooltip-content
+            clrPosition="bottom-right"
+            clrSize="md"
+            *clrIfOpen
+            style="max-width: none"
+          >
+            <span>{{ page }}</span>
+          </clr-tooltip-content>
+        </clr-tooltip>
+      </a>
+    </clr-vertical-nav-group-children>
+  </clr-vertical-nav-group>
+</clr-vertical-nav>
