@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~10.0.2",
     "@angular/common": "~10.0.2",
@@ -49,5 +49,16 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cryptonex7/--template-ng-clarity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cryptonex7/--template-ng-clarity/issues"
+  },
+  "homepage": "https://github.com/Cryptonex7/--template-ng-clarity"
 }
